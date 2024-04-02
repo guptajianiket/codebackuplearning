@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import NoSuchElementException
 startTime = time.time()
-service = Service("C:\\Users\\aniket.gupta\\Desktop\\chromedriver_win32 (1)\\chromedriver.exe")
+service = Service("C:\\Users\\aniket.gupta\\Desktop\\chromedriver.exe")
 driver = webdriver.Chrome(service = service)
 driver.implicitly_wait(6)
 driver.get("https://interactivity-staging-viacom18.web.app/")
@@ -123,7 +123,7 @@ def searc():
         globals()['sh'] = globals()['sh'] + 1
 
     def list():
-        expected = "1316check"
+        expected = "Voot player"
         if globals()['sh'] == 10:
             if L1 == expected:
                 print(f"The expected CFE is in ninth row of page {page_number}")

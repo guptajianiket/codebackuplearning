@@ -31,7 +31,7 @@ driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[2]/div/div/div/div/
 time.sleep(3)
 
 # Click on the show
-driver.find_element(By.XPATH, "//*[@id='menu-']/div[3]/ul/li[2]").click()
+driver.find_element(By.XPATH, "//*[@id='menu-']/div[3]/ul/li[21]").click()
 time.sleep(2)
 
 # Click on the select report
@@ -80,7 +80,6 @@ def reportsend(endepisodenumber):
 
         # Select Episode
         driver.find_element(By.XPATH, f"//*[@id='menu-']/div[3]/ul/li[{i}]").click()
-
         # Enter email address
         driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[2]/div/div/div/div/input").click()
         time.sleep(2)
@@ -92,9 +91,10 @@ def reportsend(endepisodenumber):
 
         # Click on send reports
         driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[2]/div/div/div/div/button").click()
-        time.sleep(30)
         print(f"Episode {i} report sent")
-reportsend(10)
+        time.sleep(30)
+
+reportsend(30)
 
 
 print('\nTask Completed!\n\nThe script took {0} seconds !'.format(time.time() - startTime))

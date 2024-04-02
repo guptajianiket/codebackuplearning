@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.alert import Alert
 startTime = time.time()
-service = Service("C:\\Users\\aniket.gupta\\Desktop\\chromedriver_win32 (1)\\chromedriver.exe")
+service = Service("C:\\Users\\aniket.gupta\\Desktop\\chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 driver.implicitly_wait(10)
 driver.get("https://quiz.voot.com/leaderboard/3c0ba220-2e66-11ec-827d-c30720bd7756-1ab")
@@ -59,7 +59,7 @@ driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[2]/div/div/div/div/
 time.sleep(3)
 
 # Click on the show
-driver.find_element(By.XPATH, "//*[@id='menu-']/div[3]/ul/li[7]").click()
+driver.find_element(By.XPATH, "//*[@id='menu-']/div[3]/ul/li[45]").click()
 
 
 time.sleep(2)

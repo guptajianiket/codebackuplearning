@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 startTime = time.time()
-service = Service("C:\\Users\\aniket.gupta\\Downloads\\chromedriver_win32\\chromedriver.exe")
+service = Service("C:\\Users\\aniket.gupta\\Desktop\\chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 driver.implicitly_wait(10)
 driver.get("https://interactivity-staging-viacom18.web.app/")
@@ -41,12 +41,13 @@ time.sleep(1)
 # Click on Show Type
 #driver.find_element(By.CSS_SELECTOR, f"input[value={input('Enter the show type properly', )}]").click()
 
+
+
 # Click on show list
 driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[2]/div/div/div/div/div[1]/div/div").click()
 time.sleep(2)
 
-# Click on the show
-driver.find_element(By.XPATH, "//*[@id='menu-']/div[3]/ul/li[2]").click()
+driver.find_element(By.XPATH, f"//*[@id='menu-']/div[3]/ul/li[{1}]").click()
 time.sleep(2)
 
 # Save and Next
@@ -69,5 +70,125 @@ driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div
 
 # Click on save icon
 driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[2]/div/span[6]").click()
+time.sleep(2)
 
+# Click on the menu
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/div").click()
+
+# Click on the waiting page
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/ul/li[2]").click()
+time.sleep(2)
+
+# Click on design space
+wrapper = driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[1]/div[1]/iframe")
+wrapper.click()
+
+# Clikc on style manager icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[3]/div/span[1]").click()
+
+# Click on decoration of the background
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-decorations']/div[1]").click()
+
+# Clear and Enter Background Color
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").clear()
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").send_keys("#0d0620")
+
+# Click on save icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[2]/div/span[6]").click()
+time.sleep(2)
+
+# Click on the menu
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/div").click()
+
+# Click on the Supplimantry page
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/ul/li[3]").click()
+time.sleep(2)
+
+# click on the + icon
+driver.find_element(By.XPATH,"//*[@id='call-for-entry']/div[3]/div/div/div/div/div[1]/div[1]/div/div[2]/button").click()
+time.sleep(1)
+
+# enter value in text box
+driver.find_element(By.XPATH,"//*[@id='standard-basic']").send_keys("existinguser")
+
+# click on the add icon
+driver.find_element(By.XPATH,"//*[@id='call-for-entry']/div[3]/div/div/div/div/div[1]/div[1]/div/button[1]").click()
+time.sleep(1)
+
+# click on the pages
+driver.find_element(By.XPATH,"//*[@id='call-for-entry']/div[3]/div/div/div/div/div[1]/div[1]/div/div[1]/div/div/div").click()
+
+# click on the sup page
+driver.find_element(By.XPATH,"//*[@id='menu-']/div[3]/ul/li[1]").click()
+
+# Click on design space
+wrapper = driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[1]/div[1]/iframe")
+wrapper.click()
+
+# Clikc on style manager icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[3]/div/span[1]").click()
+
+# Click on decoration of the background
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-decorations']/div[1]").click()
+
+# Clear and Enter Background Color
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").clear()
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").send_keys("#0d0620")
+
+# Click on save icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[2]/div/span[6]").click()
+time.sleep(2)
+
+# Click on the menu
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/div").click()
+
+# Click on the waiting page
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/ul/li[2]").click()
+time.sleep(2)
+
+# Click on design space
+wrapper = driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[1]/div[1]/iframe")
+wrapper.click()
+
+# Clikc on style manager icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[3]/div/span[1]").click()
+
+# Click on decoration of the background
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-decorations']/div[1]").click()
+
+# Clear and Enter Background Color
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").clear()
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").send_keys("#0d0620")
+
+# Click on save icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[2]/div/span[6]").click()
+time.sleep(2)
+
+# Click on the menu
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/div").click()
+
+# Click on the thank you page
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/div/div/ul/li[4]").click()
+time.sleep(2)
+
+# Click on design space
+wrapper = driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[1]/div[1]/iframe")
+wrapper.click()
+
+# Clikc on style manager icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[3]/div/span[1]").click()
+
+# Click on decoration of the background
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-decorations']/div[1]").click()
+
+# Clear and Enter Background Color
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").clear()
+driver.find_element(By.XPATH, "//*[@id='gjs-sm-background-color']/div[2]/div/div[1]/input").send_keys("#0d0620")
+
+# Click on save icon
+driver.find_element(By.XPATH, "//*[@id='uiMan']/div[1]/div[2]/div[2]/div/span[6]").click()
+time.sleep(2)
+
+# Click on the Create quiz header
+driver.find_element(By.XPATH, "//*[@id='call-for-entry']/div[1]/header/div/div/div[2]/div/div/div/a[1]").click()
 

@@ -23,21 +23,18 @@ footer = driver.find_element_by_class_name('footer')
 # Find all anchor tags within the footer
 footer_links = footer.find_elements_by_tag_name('a')
 
-# Initialize a dictionary to store URLs assigned to variables
-url_variables = {}
+# Dictionary to store URLs based on the last name in the URL path
+url_dict = {}
 
 # Extract URLs and assign them based on the last name in the path
 for link in footer_links:
     href = link.get_attribute('href')
     if href:
-        last_name = href.split('/')[-1].split('.')[0]  # Extracting last part of the URL without extension
-        # Creating variable name by removing special characters and replacing hyphens with underscores
-        var_name = last_name.replace('-', '_').replace('?', '').replace('=', '')
-        url_variables[var_name] = href
+        last_name = href.split('/')[-1]
+        url_dict[last_name] = href
 
-# Print the dictionary with variable assignments
-for var_name, url in url_variables.items():
-    print(f"{var_name} = '{url}'")
+# Print the dictionary
+print(url_dict)
 
 # Close the WebDriver
 driver.quit()
